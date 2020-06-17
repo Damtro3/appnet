@@ -1,18 +1,24 @@
 package com.internetowa.appnet;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @RestController
 public class localhost {
 
-    @GetMapping
-    public String czas()
-    {
-        Date date = new Date();
-        SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        return dt1.format(date);
+
+    @RequestMapping("/")
+    public String index() {
+        return "index";
     }
+    @PostMapping("/hello")
+    public String sayHello(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello";
+    }
+
+
 }
