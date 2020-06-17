@@ -11,12 +11,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 
-
-
+@RestController
 public class Time extends  Application  {
     ConfigurableApplicationContext app;
     public void init() throws Exception
@@ -44,5 +45,19 @@ public class Time extends  Application  {
             return ((Stage) getSource());
         }
     }
+
+
+
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
+    @PostMapping("/hello")
+    public String sayHello(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello";
+    }
+
+
 
 }
