@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 import org.springframework.core.io.Resource;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.Mapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
@@ -21,6 +23,7 @@ public class Initialazer implements ApplicationListener<Time.StageReadeEvent> {
     {
         this.applicationTitle=applicationTitle;
     }
+
 
     @Override
     public void onApplicationEvent(Time.StageReadeEvent event)

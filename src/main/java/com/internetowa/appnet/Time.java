@@ -11,11 +11,12 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 
-@RestController
+
 public class Time extends  Application  {
     ConfigurableApplicationContext app;
     public void init() throws Exception
