@@ -18,7 +18,7 @@ public class WebController {
     @RequestMapping("/hello")
     public String hello()
     {
-        System.out.println("jestem tutaj");
+        System.out.println("AppControler->hello()");
         return "hello";
     }
 

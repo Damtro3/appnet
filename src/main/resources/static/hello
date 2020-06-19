@@ -4,10 +4,6 @@
 <head>
     <meta  charset=ISO-8859-1">
 
-    <!-- Static content -->
-    <link rel="stylesheet" href="/resources/css/style.css">
-    <script type="text/javascript" src="/resources/js/app.js"></script>
-
     <title>Spring Boot</title>
 </head>
 <body>
@@ -16,15 +12,7 @@
 <hr>
 
 <div class="form">
-    <form action="hello" method="post" onsubmit="return validate()">
-        <table>
-            <tr>
-                <td>Enter Your name</td>
-                <td><input id="name" name="name"></td>
-                <td><input type="submit" value="Submit"></td>
-            </tr>
-        </table>
-    </form>
+    iiiiiiiiiiiii
 </div>
 
 </body>
