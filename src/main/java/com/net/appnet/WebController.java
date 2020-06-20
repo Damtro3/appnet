@@ -1,25 +1,25 @@
 package com.net.appnet;
 
+import javafx.beans.property.SimpleDoubleProperty;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.Model;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 @Controller
 public class WebController {
 
 
 
-    @RequestMapping("/test")
+    @RequestMapping (value="/test", method = RequestMethod.GET)
     public String test()
     {
-        System.out.println("jestem tutaj");
-        return "index";
-    }
-    @RequestMapping("/hello")
-    public String hello()
-    {
-        System.out.println("AppControler->hello()");
-        return "hello";
+        System.out.println("Test");
+        return "test.jsp";
     }
 
 }
