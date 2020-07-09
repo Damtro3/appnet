@@ -9,12 +9,13 @@
        <h1><%= new java.util.Date()%></h1>
 
        <%
-       test t =new test();
-       t.settest("AAA");
-       t.gettest;
+       test t = new test();
+       t.settest();
+      String t2= t.gettest();
+       out.println(t2);
        %>
 
-       <h2> <%= test.settest("aaaa") %></h2>
+
 
 
 <strong>Server Time&nbsp;:&nbsp;&nbsp;</strong><label id="timelable"></label>

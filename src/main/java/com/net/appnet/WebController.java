@@ -18,10 +18,15 @@ public class WebController {
     @RequestMapping (value="/test", method = RequestMethod.GET)
     public String test(Model model)
     {
-        test t = new test();
+        String a="aaaaaaaaaaa";
         System.out.println("Test");
-        model.addAttribute("test1", t);
+        model.addAttribute("tekst", a);
         return "test.jsp";
+    }
+    test t =new test();
+    public  void tescik()
+    {
+
     }
 
 }
